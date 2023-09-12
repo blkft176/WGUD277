@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+ <!-- Set the character encoding and title of the page and linking to the css file -->
+<head>
+    <meta charset= "utf-8">
+    <title>Wgu 284 Software engineering</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+
+<body> <!-- Main title with a link to Montana.gov -->
+    <header>
+     <h1>Montana</h1>
+     <h3>The Treasure state's general information</h3>
+     <p>go to<a href="https://montana.gov/" target="_blank">Montana.gov </a> for more information</p>
+    </header>
+
+ <!-- Nav Sidebar title and Nav sidebar links -->
+ <nav class="sidebar horizontal-menu">
+    <h2 class="nav-header">Navigation Menu</h2>
+    <ol>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="capital.html">Capital</a></li>
+        <li><a href="missoula.html">Missoula</a></li>
+        <li><a href="bozeman.html">Bozeman</a></li>
+    </ol>
+</nav>
+
+<div class="container"> </div>
+<div id="background-box"> 
+  <section>
+<h1> Montana In a Nutshell</h1>
+<p> 
+    <ul> <!-- List of Montana Facts -->
+        <li> Montana population: 1.08 million as of september 2021</li>
+        <li> Montana was incorporated as a state: November 8th, 1889</li>
+        <li> Montana is located in the western region of the united states</li>
+        <li> Montana is in the northern rocky mountain region </li>
+        <li> Montana's average income: $60560</li>
+    </ul>
+</p>
+<p> <!-- Additional paragraph about Montana -->
+    Montana, often referred to as "The Treasure State" or "Big Sky Country,"
+    is located in the western United States. It boasts stunning landscapes,
+    including the Montana Rockies and famous national parks like Glacier and Yellowstone.
+    The state's economy is diverse, with agriculture, mining, and tourism playing vital
+    roles. Montana has a rich cultural heritage influenced by Native American traditions,
+    and it is home to various Native American tribes. The state offers abundant outdoor
+    activities, a rich wildlife heritage, and a strong cowboy culture. 
+    Its low population density and political diversity contribute to its unique
+    character, making it a popular destination for nature enthusiasts, history buffs,
+    and those interested in Native American culture alike.
+</p>
+  </section>
+  
+
+<aside><!-- Aside section with title and body -->
+    <h2> Other information</h2>
+
+   <p>
+    Glacier National Park in Montana is a spectacular natural wonder, renowned
+     for its diverse landscapes, glaciers, and abundant wildlife. 
+     Visitors can explore rugged mountains, pristine lakes, and dense forests while 
+     enjoying outdoor activities like hiking and wildlife watching. 
+     The iconic Going-to-the-Sun Road offers breathtaking views. 
+     This park, forming part of a UNESCO World Heritage Site, prioritizes conservation and 
+     is an international symbol of cooperation with Canada's Waterton Lakes National Park. 
+     Whether in summer or winter, Glacier National Park offers an unforgettable experience 
+     in the heart of the Rocky Mountains.
+   </p>
+   <img src="img/flower.jpg" alt="Glacier park in Montana" class="aside-image"> <!-- Image of Glacier Park -->
+  </aside>
+
+  <form><!-- Form section containing form information -->
+    <table>
+        <tr>
+            <td><label for="first-name">First Name:</label></td>
+            <td><input type="text" id="first-name" name="first-name" required  placeholder="first-name"></td>
+        </tr>
+        <tr>
+            <td><label for="last-name">Last Name:</label></td>
+            <td><input type="text" id="last-name" name="last-name" required  placeholder="last-name"></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" id="email" name="email" required  placeholder="email"></td>
+        </tr>
+        <tr>
+           <td><label for="verify email">verify Email</label></td>
+           <td><input type="email" id="verify-email" name="verify-email" required  placeholder="verify-email"></td>
+        </tr>
+        <tr>
+            <td><label for="message">Message:</label></td>
+            <td><textarea id="message" name="message" required  placeholder="message"></textarea></td>
+        </tr>
+    </table>
+    <button type="submit" id="submit-button">Submit</button>
+    <div id="error-message" class="error-message"></div>
+  </form>
+</div>
+<script> <!-- JavaScript script for form validation -->
+  document.getElementById('submit-button').addEventListener('click', function () {
+      var email = document.getElementById('email').value;
+      var verifyEmail = document.getElementById('verify-email').value;
+      var errorMessage = document.getElementById('error-message');
+
+      errorMessage.textContent = ''; 
+
+      if (email !== verifyEmail || !isValidEmail(email)) {
+          errorMessage.textContent = 'Please enter a valid matching email address.';
+      } else {
+          errorMessage.textContent = ''; 
+          alert('Email is valid and matches.');
+      }
+  });
+
+  function isValidEmail(email) {
+      var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      return emailPattern.test(email);
+  }
+</script>
+</body>
+</html>

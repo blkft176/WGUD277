@@ -1,0 +1,122 @@
+/* Styles for the entire page body */
+body {
+    color: black;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #b69f82;
+}
+
+/* Styles for the header section */
+header {
+    
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+    background-image: url(img/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+/* Styles for the main content container */
+#background-box {
+    background-color: #063553; 
+    width: 1200px; 
+    height: 800px; 
+    margin: 0 0 0 17%;
+    border-radius: 10px;  
+    text-align: center;
+    padding: 20px; 
+    color: #fff; 
+    font-size: 18px;
+    
+}
+
+/* Styles for the class container */
+.container {
+    width: 70%;
+    padding: 50px;
+    text-align: center;
+    
+}
+
+/* Styles for the main content section */
+section{
+    float: left;
+    width: 60%;
+}
+
+/* Styles for the aside section */
+aside {
+ width: 25%;
+float: right;
+}
+  
+/* Styles for the sidebar navigation menu */
+.horizontal-menu {
+    list-style: none; 
+    padding: 0; 
+    margin: 0 0 0 22%;
+
+}
+
+/* Styles for sidebar links */
+.horizontal-menu li {
+    display: inline-block; /* Display list items inline */
+    margin-right: 200px; /* Add some spacing between menu items */
+}
+
+.horizontal-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #063553;
+    padding: 5px 10px; /* Add padding to create clickable area */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+/* Styles for the hover effect on sidebar links */
+.horizontal-menu a:hover {
+    background-color: #bef2ff;
+}
+
+
+
+/* Styles for custom links with the "custom-link" class */
+.custom-link {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+/* Styles for error messages */
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+/* size requriment for images within the aside section */
+.aside-image {
+    width: 200px;
+    height: 200px;
+}
+
+/* sets the color of the text for the "popular destinations table" */
+.popular {
+    color: #fff;
+    clear:left;
+}
+
+/* postions header title for popular destinations table */
+.pop-header {
+    float: left;
+    
+}
+
+/* postions and styles header title for navigation menu */
+.nav-header {
+    color: white;
+    margin-left: 25%;
+}
